@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+<head>
+<style type="text/css">
+	body {margin:0;}
+    ul.topnav {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #070707;}
+
+	ul.topnav li {float: left;}
+	ul.topnav li a {
+				display: inline-block;
+				color: #FFFFFF;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				transition: 0.3s;
+				font-size: 17px;}
+
+	ul.topnav li a:hover {background-color: #555;}	
+	body {background-color:#D1415E;}
+	
+	#footerBar {
+	position: absolute;
+	bottom:0px;
+	width:100%;
+	border-top: 1px solid #ebebeb; overflow: hidden;}
+
+	.buttonHolder{ text-align: center; }
+	
+	.centerImage{text-align:center; position:absolute; width: 400%; height:100px; top:50%; bottom:40; left:0px;}
+
+	#centerWords {text-align: center; font-family:"Open Sans"; color: #0E0303; font-size:38px;}
+
+	
+	
+	#signUp {
+	margin: 0;
+	width:25%;
+	height:500px;
+	position:absolute;
+	top:70px;
+	right:20px;
+	background-color:#000000;
+	border-radius: 20px;
+	border: 1px solid #999;
+	color:#EC1059;
+	
+	}
+	strong {position:relative; margin-left:12px;}
+	h3 {color:#181616;
+		font:normal 18px cursive;}
+	h1.welcome {text-align:center;
+	color:#FFFFFF; font-size:38px; font-weight:300; margin-top:27px; margin-bottom:50px;}
+	</style>
+</head> 
+
+
+<body>
+	<ul class="topnav" >
+			  <li><a class="active" href="#home" title="Check out our homepage">Home</a></li>
+			  <li><a href="#news" title="Find latest updates">News</a></li>
+			  <li><a href="#contact" title="Contact details here">Contact</a></li>
+			  <li><a href="#about" title="More about us">About</a></li>
+			  <li><a href="#options"><img src ="option.png" title= "options" style="position:absolute; top:7px; right:7px"/> </a></li>
+			  
+    </ul>
+	
+
+	<div><h1 class="welcome">Olubunmi says "Welcome"</h1></div>
+    <div id="signUp">
+	<h3 style="color:white;"> Need daily inspirational quotes?<em style="color:#EC1059">Sign up here: </em ></h3>
+	<hr/><form>
+			<strong>Full Name: </strong><input type="text" style="border: 2px solid #ffffff; border-radius: 6px;" size = "34" /> <br/>
+			<br/><br/><strong>Sex:  </strong><input type="radio" size= "30" name="Sex" value="Female"/> <em>Female</em>
+			<input type="radio" name="Sex" value="Male"/><em>Male</em> <br/><br/>
+			<br/><strong>Email: </strong><input type="text" style="border: 2px solid #ffffff; border-radius: 6px;" size = "40" name="email" /> <br/><br/>
+			<br/><strong>Confirm Email: </strong><input type="text" style="border: 2px solid #ffffff; border-radius: 6px;" size="30" /> <br/><br/>
+			<br/><strong>Password: </strong><input type="password" style="border: 2px solid #ffffff; border-radius: 6px;" size = "36" name="pword" /> <br/>
+			<br/><br/><strong>Age Range: </strong> <input type="radio" name="ageRange" value="<18"/> <em><18</em>
+			<input type="radio" name="ageRange" value="18-35"/><em>18-35</em> 
+			<input type="radio" name="ageRange" value=">35"/><em>>35</em> <p></p>
+			<br/>
+				<div class="buttonHolder">
+					<input value="Submit" title="Search" type="submit"> 
+  
+				</div>
+
+	
+			</form>
+  
+  <!--<img src="happy.png" class="centerImage"> -->
+  
+  </div>
+   <div id="footerBar"><h4 style="text-align:center; font-weight:italic;"> <em>Be happy! Be smart! Live your dream!</em> </h4></div>
+   <div id="centerWords"> <h5> <em> "I love the person I've become</em> <br/> because I fought hard to become her."</h5>
+   <div id="otherWords"> <h5> <em> "There are countless</em> <br/> reasons to be happy"</h5>
+          </div>
+</body>
+</html>
