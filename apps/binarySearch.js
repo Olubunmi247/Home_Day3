@@ -1,81 +1,64 @@
 (function(){
-	Array.prototype.toTwenty = function(){
-		var list = [];
-		for (var i = 1; i <= 20; i++) {
-			list.push(i);
-		}
-		return list;
-	};
-	
-	Array.prototype.toForty = function(){
-		var list = [];
-		for (var i = 2; i <= 40; i++) {
-			if(i % 2 === 0){
-				list.push(i);
-			}
-		}
-		return list;
-	};
-	
-	Array.prototype.toOneThousand = function(){
-		var list = [];
-		for (var i = 10; i <= 1000; i++) {
-			if(i % 10 === 0){
-				list.push(i);
-			}
-		}
-		return list;
-	};	
-	
-	Array.prototype.search = function(n){
-		var s = {
-			index: 0,
-			count: 0,
-			length: this.length
-		}
-		var firstIndex  = 0,  
-		lastIndex   = this.length - 1; 
-		 
+Array.prototype.toTwenty = function(){
+	var list = [];
+	for(var i = 1; i < 21; i++){
+    list.push(i);
+  }
+  return list;
+};
 
-		while(firstIndex <= lastIndex)  
-		{  
-			middleIndex = Math.floor((lastIndex + firstIndex) / 2); 
-			if(this[lastIndex] === n){
-				s.index = lastIndex;
-				return s;
-			}
-			else{
-				lastIndex -= 1;
-			}
+Array.prototype.toForty = function(){
+	var list = [];
+  for(var i = 1; i < 21; i++){
+    list.push(i*2);
+  }
+  return list;
+};
 
-			if(this[firstIndex] === n){
-				s.index = firstIndex;
-				return s;
-			}
-			else{
-				firstIndex += 1;
-			}
-			if(this[middleIndex] === n) {
-				s.index = middleIndex;
-				return s;
-			}
+Array.prototype.toOneThousand = function(){
+	var list = [];
+  for(var i =1; i < 101; i++){
+    list.push(i*10);
+  }
+  return list;
+};
 
-			else if (n < this[middleIndex])  
-			{  
-				lastIndex = middleIndex - 1;  
-			}   
-			else if (n > this[middleIndex])  
-			{  
-				firstIndex = middleIndex + 1;  
-			}
-			s.count++;
+Array.prototype.search = function(number){
+  index0 = 0;
+  indexN = number.length-1;
+  var len = number.length;
+  var output = {count:0, index:-1, length:len};
+  var mid = Math.floor((index0+indexN)/2);
+  
+  while(index0<=indexN){
+    
+    if(number[index0]==number){
+      output.index=index0;
+      return output;
+    }
+    else if(number[indexN]==number){
+      output.index=indexN;
+      return output;
+    }
+    else if(number[mid]==number){
+      output.index = mid;
+      return output;
+    }
+    else if(number[mid]<number){
+      index0 = mid+1;
+      indexN -=1;
+    }
+    else{
+    index0 +=1;
+    indexN = mid -1;
+      
+    }
+    output.count ++;
+  }
+  return output;
+};
 
-		}  
-		s.index = -1;
-		return s; 
-	};
-	
-	module.exports = Array.prototype.toTwenty();
+    module.exports = Array.prototype.toTwenty();
 	module.exports = Array.prototype.toForty();
 	module.exports = Array.prototype.toOneThousand();
 	
